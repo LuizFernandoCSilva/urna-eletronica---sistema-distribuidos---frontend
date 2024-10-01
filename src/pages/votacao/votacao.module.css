@@ -1,0 +1,111 @@
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  max-height: 100vh;
+  margin-top: 20px;
+}
+
+/* Seção de votação */
+.register {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título */
+.register h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  position: relative;
+}
+
+.register h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0d1216;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input::placeholder{
+  font-size: 14px;
+}
+.input:focus {
+  border-color: #081624;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.button {
+  padding: 12px 25px;
+  background-color: #040507;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #161f29;
+  transform: translateY(-2px);
+}
+
+.success {
+  color: green;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .register {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .register h1 {
+    font-size: 20px;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+  }
+}
